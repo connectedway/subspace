@@ -222,6 +222,12 @@ $ sudo docker logs subspace
 
 <log output>
 
+$ sudo docker stop spiritcloud
+
+$ sudo docker remove spiritcloud
+
+$ sudo docker rmi connectedway/spiritcloud
+
 ```
 
 #### Docker-Compose Example
@@ -271,6 +277,15 @@ $ sudo docker rm subspace
 
 # Re-create and start the container
 $ sudo docker create ... (see above)
+```
+
+#### Building a new Docker Image
+
+```bash
+$ sudo docker build -t spiritcloud .
+$ docker login -u connectedway -p digital0
+$ docker tag spiritcloud:latest connectedway/spiritcloud:latest
+$ docker push connectedway/spiritcloud:latest
 ```
 
 ## Contributors ✨
